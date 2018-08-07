@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class MySlider extends Component {
   handleChange = (event) => {
-    // event.preventDefault;
     const selectionValue = event.target.value;
     this.props.selectionUpdate(selectionValue);
   }
