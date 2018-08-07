@@ -7,10 +7,16 @@ class App extends Component {
     current: 0,
   }
 
+  handleUpdate = (value) => {
+    console.log(value);
+    this.setState({
+      current:value,
+    })
+  }
   render() {
     return (
       <div className="App">
-        <MySlider />
+        <MySlider selectionUpdate={this.handleUpdate}/>
         <h1> {this.state.current}</h1>
       </div>
     );
